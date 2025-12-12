@@ -57,7 +57,6 @@ ul {
 .header-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   width: 100%;
 }
 
@@ -67,11 +66,13 @@ ul {
   gap: 12px;
   font-weight: 700;
   font-size: 1.25rem;
+  margin-right: auto;
 }
 
 .main-nav {
   display: flex;
   gap: 32px;
+  margin-right: 32px;
 }
 
 .nav-link {
@@ -613,7 +614,8 @@ ul {
   transform: translateY(10px);
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   z-index: 1000;
-  margin-top: 10px; /* Gap for hover path handling */
+  margin-top: 10px;
+  /* Gap for hover path handling */
 }
 
 /* Show dropdown on hover */
