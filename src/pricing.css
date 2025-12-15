@@ -1,0 +1,233 @@
+/* Inherit main styles from style.css */
+
+/* Pricing Specific Layouts */
+.pricing-hero {
+    text-align: center;
+    padding: 80px 20px 40px;
+}
+
+.pricing-title {
+    font-size: 3.5rem;
+    /* Match hero h1 size */
+    font-weight: 800;
+    margin-bottom: 40px;
+    color: var(--text-main);
+    letter-spacing: -0.02em;
+}
+
+.pricing-toggle {
+    display: inline-flex;
+    background: #f4f4f5;
+    /* Light gray */
+    padding: 4px;
+    border-radius: 8px;
+    margin-bottom: 60px;
+}
+
+.toggle-btn {
+    padding: 8px 24px;
+    background: transparent;
+    color: var(--text-scnd);
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.toggle-btn.active {
+    background: white;
+    color: var(--text-main);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Pricing Grid */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 100px;
+}
+
+.pricing-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 40px 32px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.08);
+    border-color: var(--primary);
+}
+
+.card-icon {
+    margin-bottom: 24px;
+    color: var(--primary);
+}
+
+.card-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--text-main);
+}
+
+.card-desc {
+    color: var(--text-scnd);
+    margin-bottom: 32px;
+    font-size: 1rem;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 8px;
+    color: var(--text-main);
+}
+
+.price-detail {
+    font-size: 0.9rem;
+    color: var(--text-scnd);
+    margin-bottom: 32px;
+    line-height: 1.5;
+}
+
+.btn-card {
+    width: 100%;
+    padding: 14px;
+    background: var(--text-main);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 32px;
+    transition: background 0.2s;
+}
+
+.btn-card:hover {
+    background: black;
+}
+
+/* Specific styling for the orange highlight button if needed */
+.pricing-card:nth-child(2) .btn-card {
+    /* Optional: make Pro button primary color */
+    background: var(--text-main);
+}
+
+.pricing-card:last-child .btn-card {
+    background: var(--primary);
+}
+
+.pricing-card:last-child .btn-card:hover {
+    background: var(--primary-hover);
+}
+
+
+.features-label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--text-main);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+}
+
+.feature-list li {
+    display: flex;
+    gap: 12px;
+    font-size: 1rem;
+    color: var(--text-scnd);
+    margin-bottom: 16px;
+    line-height: 1.5;
+    align-items: flex-start;
+}
+
+.check-icon {
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* Calculator Styles */
+.calc-item {
+    background: white;
+    padding: 16px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+.calc-header label {
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.calc-header .cost {
+    font-size: 0.85rem;
+    color: var(--text-scnd);
+    background: #f4f4f5;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.calc-slider {
+    width: 100%;
+    margin: 12px 0;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 6px;
+    background: #e4e4e7;
+    /* Light gray track */
+    border-radius: 3px;
+    outline: none;
+}
+
+.calc-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: var(--primary);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.2s;
+    border: 2px solid white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.calc-slider::-webkit-slider-thumb:hover {
+    background: var(--primary-hover);
+}
+
+.calc-val-display {
+    font-size: 0.9rem;
+    color: var(--text-main);
+    font-weight: 500;
+    text-align: right;
+}
+
+.calculator-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+@media (max-width: 768px) {
+    .calculator-grid {
+        grid-template-columns: 1fr;
+    }
+}

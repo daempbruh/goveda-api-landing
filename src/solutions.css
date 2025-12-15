@@ -1,0 +1,313 @@
+/* Solutions Page Styles */
+.solutions-hero {
+    padding: 100px 20px 60px;
+    text-align: center;
+    background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);
+}
+
+.solutions-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.solutions-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-scnd);
+    max-width: 700px;
+    margin: 0 auto 40px;
+    line-height: 1.5;
+}
+
+/* Why Goveda Section */
+.why-section {
+    padding: 80px 20px;
+    background: white;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 60px;
+    color: var(--text-main);
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.why-card {
+    text-align: left;
+    padding: 32px;
+    border-radius: 12px;
+    background: #f9fafb;
+    border: 1px solid var(--border);
+    transition: transform 0.2s;
+}
+
+.why-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+}
+
+.why-icon {
+    width: 48px;
+    height: 48px;
+    background: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    border: 1px solid var(--border);
+    color: var(--primary);
+}
+
+.why-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--text-main);
+}
+
+.why-desc {
+    color: var(--text-scnd);
+    line-height: 1.6;
+}
+
+/* Feature Deep Dive */
+.feature-section {
+    padding: 80px 20px;
+    background: #ffffff;
+}
+
+.feature-row {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto 100px;
+}
+
+.feature-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.feature-content {
+    flex: 1;
+}
+
+.feature-image {
+    flex: 1;
+    background: #f4f4f5;
+    border-radius: 16px;
+    height: 400px;
+    /* Placeholder height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-scnd);
+    font-weight: 500;
+    border: 1px solid var(--border);
+}
+
+.feature-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--text-main);
+}
+
+.feature-desc {
+    font-size: 1.1rem;
+    color: var(--text-scnd);
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.feature-list-item {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+    color: var(--text-main);
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 100px 20px;
+    text-align: center;
+    background: #000;
+    color: white;
+}
+
+.cta-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.cta-desc {
+    font-size: 1.25rem;
+    color: #a1a1aa;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 768px) {
+    .feature-row {
+        flex-direction: column;
+    }
+
+    .feature-row.reverse {
+        flex-direction: column;
+    }
+
+    .solutions-title {
+        font-size: 2.5rem;
+    }
+}
+
+/* New Layout Variations */
+
+/* 4-Column Grid (LegalTech) */
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Process Timeline (Tech Transfer) */
+.timeline-section {
+    padding: 80px 20px;
+    background: white;
+}
+
+.timeline-steps {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 60px auto 0;
+    position: relative;
+}
+
+.timeline-step {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    padding: 0 20px;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin: 0 auto 20px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Connecting line */
+.timeline-steps::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    right: 50px;
+    height: 2px;
+    background: var(--border);
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .timeline-steps {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .timeline-steps::before {
+        display: none;
+    }
+}
+
+/* 2x2 Feature Blocks (Patent Offices) */
+.card-grid-2x2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.feature-block {
+    background: white;
+    padding: 40px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+    .card-grid-2x2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Checklist Grid (Search Agencies) */
+.checklist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.checklist-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.check-circle {
+    width: 24px;
+    height: 24px;
+    background: #dcfce7;
+    /* Light green */
+    color: #166534;
+    /* Green */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
