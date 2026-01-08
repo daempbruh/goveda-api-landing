@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing | Goveda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="/goveda-api-landing/assets/pricing-BC9EyIxp.js"></script>
+  <link rel="modulepreload" crossorigin href="/goveda-api-landing/assets/style-CibLJKxs.js">
+  <link rel="modulepreload" crossorigin href="/goveda-api-landing/assets/main-CkOFmxVC.js">
+  <link rel="stylesheet" crossorigin href="/goveda-api-landing/assets/style-4NqXhFQg.css">
+  <link rel="stylesheet" crossorigin href="/goveda-api-landing/assets/pricing-B78qpq2h.css">
+</head>
+
+<body class="pricing-page">
+    <div id="app">
+        <!-- Header (Dark Mode) -->
+        <header class="site-header">
+            <div class="container header-container">
+                <a href="../" class="logo" aria-label="Goveda Home">
+                    <img src="../logo.png" alt="Goveda" style="height: 180px;">
+                </a>
+                <nav class="main-nav">
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">
+                            Product
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" class="chevron">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="../products/api/" class="dropdown-item">OpenPatent Pro API</a>
+                            <a href="../products/openpatent-pro/" class="dropdown-item">OpenPatent Pro</a>
+                            <a href="../products/pro/" class="dropdown-item">GoVeda Pro</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">
+                            Solutions
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" class="chevron">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-section">
+                                <span class="dropdown-header">Industries</span>
+                                <a href="../solutions/law-firms/" class="dropdown-item">Law Firms</a>
+                                <a href="../solutions/legaltech/" class="dropdown-item">LegalTech Companies</a>
+                                <a href="../solutions/tech-transfer/" class="dropdown-item">Tech Transfer Offices</a>
+                                <a href="../solutions/patent-offices/" class="dropdown-item">Patent Offices</a>
+                                <a href="../solutions/search-agencies/" class="dropdown-item">Patent Search Agencies</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="./" class="nav-link active">Pricing</a>
+                    <a href="../learn/" class="nav-link">Learn</a>
+                    <a href="http://goveda.com/contact" class="nav-link">Contact Us</a>
+                </nav>
+                <div class="header-actions">
+                    <div id="auth-buttons" style="display: flex; gap: 12px;">
+                        <button id="login-btn" class="btn btn-outline">Log in</button>
+                        <a href="https://platform.goveda.com/signup" class="btn btn-primary">Sign Up</a>
+                    </div>
+                    <div id="user-menu" class="user-menu" style="display: none;">
+                        <button id="user-menu-btn" class="user-menu-btn">
+                            <div class="avatar-circle">JD</div>
+                            <span class="username">John Doe</span>
+                            <svg class="chevron-down" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </button>
+                        <div id="user-dropdown" class="user-dropdown">
+                            <div class="dropdown-header">Logged in as<br><strong style="color: var(--text-main);">John
+                                    Doe</strong></div>
+                            <div class="dropdown-divider"></div>
+                            <a href="../account/" class="dropdown-item">Account Management</a>
+                            <div class="dropdown-divider"></div>
+                            <button id="logout-btn" class="dropdown-item text-red"
+                                style="width: 100%; text-align: left; background: none; border: none; cursor: pointer;">Log
+                                Out</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Pricing Hero -->
+        <section class="pricing-hero">
+            <h1 class="pricing-title">Pricing</h1>
+
+            <p class="pricing-subtitle"
+                style="margin-top: 24px; color: var(--text-scnd); font-size: 1.1rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Start for free, and upgrade your usage as your needs evolve.
+            </p>
+
+        </section>
+
+        <!-- Individual Grid -->
+        <section id="individual-grid" class="container pricing-grid">
+            <!-- OpenPatent Card -->
+            <div class="pricing-card">
+                <div class="card-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                    </svg>
+                </div>
+                <h3 class="card-title">OpenPatent</h3>
+                <p class="card-desc">Perform basic, but powerful searches</p>
+                <div class="price">$0</div>
+                <p class="price-detail">No login required</p>
+
+                <button class="btn-card">Get Started</button>
+
+                <ul class="feature-list">
+                    <li>
+                        <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        Full access to OpenPatent's library of 220M+ patents worldwide
+                    </li>
+                    <li>
+                        <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        Unlimited semantic patent searches, capped at 500 characters per query
+                    </li>
+                    <li>
+                        <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        Unlimited prior art searches, capped at 500 characters per query
+                    </li>
+                    <li>
+                        <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        Partially redacted, examiner-grade novelty reports for all prior art searches
+                    </li>
+                </ul>
+            </div>
+
+            <!-- OpenPatent Pro Card -->
+            <div class="pricing-card">
+                <div class="card-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                        <polyline points="2 12 12 17 22 12"></polyline>
+                    </svg>
+                </div>
+                <h3 class="card-title">OpenPatent Pro</h3>
+                <p class="card-desc">Best for IP professionals and builders</p>
+                <div class="price">$<span id="pro-price">39</span>
+                </div>
+                <p class="price-detail">Per month, billed monthly</p>
+
+
+
+
+                <button class="btn-card">Try Free for 14 days</button>
+
+                <p class="features-label">Everything in OpenPatent, plus:</p>
+
+                <ul class="feature-list">
+                    <li>
+                        <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        Upgrade your usage by purchasing credits as needed
+                    </li>
+                    <li>
+                        <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        Filter by keywords, classification codes, metadata and semantic concepts
+                    </li>
+                    <li>
+                        <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        No limits on character count per query
+                    </li>
+                    <li>
+                        <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        Generation of examiner-grade novelty and inventive step reports
+                    </li>
+                    <li>
+                        <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        File upload of entire invention disclosures as queries
+                    </li>
+                    <li>
+                        <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        Priority access at high traffic times
+                    </li>
+                    <li>
+                        <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        API Access
+                    </li>
+                </ul>
+            </div>
+
+            <!-- GoVeda Pro Card -->
+            <div class="pricing-card">
+                <div class="card-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                        <polyline points="2 12 12 17 22 12"></polyline>
+                        <polyline points="2 17 12 22 22 17"></polyline>
+                    </svg>
+                </div>
+                <h3 class="card-title">GoVeda Pro</h3>
+                <p class="card-desc">Best for patent office examiners</p>
+                <div class="price">Contact Us</div>
+                <p class="price-detail">Customizable solutions per your needs</p>
+
+                <button class="btn-card">Contact Us</button>
+
+                <p class="features-label">Everything in OpenPatent Pro, plus:</p>
+                <ul class="feature-list">
+                    <li>
+                        <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        Custom-build your workflow to review patent applications
+                    </li>
+                    <li>
+                        <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        AI-assisted X/Y document prior art searches specific to your application
+                    </li>
+                    <li>
+                        <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        AI-assisted claim charting and analysis
+                    </li>
+                    <li>
+                        <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        Generation of customizable Written Opinions
+                    </li>
+                    <li>
+                        <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        AI-native chatbot to assist patent examination tasks
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <div style="text-align: center; margin-top: 80px; margin-bottom: 32px;">
+            <h2 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 12px; color: var(--text-main);">Looking for
+                other
+                enterprise solutions?</h2>
+            <p style="color: var(--text-scnd); font-size: 1.1rem; max-width: 600px; margin: 0 auto;">
+                Get in touch for custom volume licensing, or start building directly with our API.
+            </p>
+        </div>
+
+        <div class="api-actions" style="margin-top: 0; display: flex; justify-content: center; gap: 16px;">
+            <a href="http://goveda.com/contact" class="btn btn-primary"
+                style="padding: 12px 32px; font-size: 1rem;">Contact Sales</a>
+            <a href="https://openapi.goveda.com/api-references" class="btn btn-outline"
+                style="padding: 12px 32px; font-size: 1rem; color: var(--text-main); border-color: var(--border);">
+                Get Started</a>
+        </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="container footer-content">
+                <div class="footer-col">
+                    <span class="footer-logo">Goveda</span>
+                    <p>&copy; 2026 Goveda Inc.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Terms</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Security</a>
+                    <a href="#">Status</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

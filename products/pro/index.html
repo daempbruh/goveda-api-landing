@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../../vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GoVeda Pro - AI-Powered Patent Intelligence | Goveda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="/goveda-api-landing/assets/style-CibLJKxs.js"></script>
+  <script type="module" crossorigin src="/goveda-api-landing/assets/main-CkOFmxVC.js"></script>
+  <link rel="stylesheet" crossorigin href="/goveda-api-landing/assets/style-4NqXhFQg.css">
+</head>
+
+<body>
+    <div id="app">
+        <!-- Header -->
+        <header class="site-header">
+            <div class="container header-container">
+                <a href="../../" class="logo" aria-label="Goveda Home">
+                    <img src="../../logo.png" alt="Goveda" style="height: 180px;">
+                </a>
+                <nav class="main-nav">
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle active">
+                            Product
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" class="chevron">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="../api/" class="dropdown-item">OpenPatent Pro API</a>
+                            <a href="../openpatent-pro/" class="dropdown-item">OpenPatent Pro</a>
+                            <a href="./" class="dropdown-item">GoVeda Pro</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">
+                            Solutions
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" class="chevron">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-section">
+                                <span class="dropdown-header">Industries</span>
+                                <a href="../../solutions/law-firms/" class="dropdown-item">Law Firms</a>
+                                <a href="../../solutions/legaltech/" class="dropdown-item">LegalTech Companies</a>
+                                <a href="../../solutions/tech-transfer/" class="dropdown-item">Tech Transfer Offices</a>
+                                <a href="../../solutions/patent-offices/" class="dropdown-item">Patent Offices</a>
+                                <a href="../../solutions/search-agencies/" class="dropdown-item">Patent Search
+                                    Agencies</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="../../pricing/" class="nav-link">Pricing</a>
+                    <a href="../../learn/" class="nav-link">Learn</a>
+                    <a href="http://goveda.com/contact" class="nav-link">Contact Us</a>
+                </nav>
+                <div class="header-actions">
+                    <div id="auth-buttons" style="display: flex; gap: 12px;">
+                        <button id="login-btn" class="btn btn-outline">Log in</button>
+                        <a href="https://platform.goveda.com/signup" class="btn btn-primary">Sign Up</a>
+                    </div>
+                    <div id="user-menu" class="user-menu" style="display: none;">
+                        <button id="user-menu-btn" class="user-menu-btn">
+                            <div class="avatar-circle">JD</div>
+                            <span class="username">John Doe</span>
+                            <svg class="chevron-down" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </button>
+                        <div id="user-dropdown" class="user-dropdown">
+                            <div class="dropdown-header">Logged in as<br><strong style="color: var(--text-main);">John
+                                    Doe</strong>
+                            </div>
+                            <div class="dropdown-divider"></div>
+                            <a href="../../account/" class="dropdown-item">Account Management</a>
+                            <div class="dropdown-divider"></div>
+                            <button id="logout-btn" class="dropdown-item text-red"
+                                style="width: 100%; text-align: left; background: none; border: none; cursor: pointer;">Log
+                                Out</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero" style="text-align: center; padding: 120px 0;">
+            <div class="container">
+                <h1
+                    style="font-size: 4rem; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 24px; line-height: 1.1;">
+                    GoVeda <span class="highlight">Pro</span>
+                </h1>
+                <p style="font-size: 1.25rem; color: var(--text-scnd); max-width: 700px; margin: 0 auto 48px;">
+                    AI-powered patent intelligence platform for professionals. Search, analyze, and create patents
+                    faster than ever before.
+                </p>
+                <div style="display: flex; justify-content: center; gap: 16px; margin-bottom: 60px;">
+                    <a href="http://goveda.com/contact" class="btn btn-primary btn-large">Contact Sales</a>
+                    <a href="#features" class="btn btn-outline btn-large">Explore Features</a>
+                </div>
+                <!-- Hero Image -->
+                <div
+                    style="max-width: 1000px; margin: 0 auto; border-radius: 12px; overflow: hidden; box-shadow: 0 20px 60px -10px rgba(0,0,0,0.15); border: 1px solid var(--border);">
+                    <img src="../../images/pro/hero-interface.png" alt="GoVeda Pro Interface"
+                        style="width: 100%; height: auto; display: block;">
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="section-padding bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Powerful Features</span>
+                    <h2>For Patent Professionals</h2>
+                    <p>AI-powered tools for search, analysis, and reporting.</p>
+                </div>
+
+                <div class="grid" style="grid-template-columns: repeat(3, 1fr); gap: 40px;">
+                    <!-- Comprehensive Coverage -->
+                    <div class="card" style="text-align: left; align-items: flex-start;">
+                        <div class="icon-box">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                            </svg>
+                        </div>
+                        <h3>Comprehensive Coverage</h3>
+                        <p>Search across 220M+ patents worldwide plus non-patent literature for the most complete view
+                            of innovation.</p>
+                    </div>
+                    <!-- Drag & Drop -->
+                    <div class="card" style="text-align: left; align-items: flex-start;">
+                        <div class="icon-box">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="17 8 12 3 7 8"></polyline>
+                                <line x1="12" y1="3" x2="12" y2="15"></line>
+                            </svg>
+                        </div>
+                        <h3>Drag & Drop Search</h3>
+                        <p>Find relevant prior art instantly by dropping documents into the search — AI understands both
+                            context and technical language.</p>
+                    </div>
+                    <!-- Smart Patent Reader -->
+                    <div class="card" style="text-align: left; align-items: flex-start;">
+                        <div class="icon-box">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                            </svg>
+                        </div>
+                        <h3>Smart Patent Reader</h3>
+                        <p>Read and understand patent applications in minutes, with AI surfacing key claims, technical
+                            content, and insights.</p>
+                    </div>
+                    <!-- Patentability Checks -->
+                    <div class="card" style="text-align: left; align-items: flex-start;">
+                        <div class="icon-box">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Patentability Checks</h3>
+                        <p>Run novelty and inventive step checks in minutes, automatically mapping claims to prior art
+                            references.</p>
+                    </div>
+                    <!-- Combination Analysis -->
+                    <div class="card" style="text-align: left; align-items: flex-start;">
+                        <div class="icon-box">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="8" y1="12" x2="16" y2="12"></line>
+                                <line x1="12" y1="8" x2="12" y2="16"></line>
+                            </svg>
+                        </div>
+                        <h3>Combination Analysis</h3>
+                        <p>Go beyond single documents — perform advanced patent combination analysis to uncover hidden
+                            connections.</p>
+                    </div>
+                    <!-- Report Generation -->
+                    <div class="card" style="text-align: left; align-items: flex-start;">
+                        <div class="icon-box">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Report Generation</h3>
+                        <p>Generate structured, customized reports with citations, claim mapping, and clear novelty
+                            analysis.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GoVeda Advantage -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">GoVeda Advantage</span>
+                    <h2>Capabilities that give professionals the edge</h2>
+                </div>
+
+                <div class="overview-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="overview-content">
+                        <h3>Precision for high-stakes decisions</h3>
+                        <p>GoVeda's IP-specialized models, validated on examiner-verified benchmarks, achieve
+                            best-in-class accuracy at scale. Delivering over 75% accuracy at top-50 results, even across
+                            the entire 220M-patent dataset.</p>
+                        <div
+                            style="margin-top: 24px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                            <img src="../../images/pro/advantage-model.png" alt="Model Performance"
+                                style="width: 100%; height: auto; max-height: 300px; object-fit: contain; display: block;">
+                        </div>
+                    </div>
+                    <div class="overview-content">
+                        <h3>AI-native workflow</h3>
+                        <p>GoVeda embeds AI into every stage — from disclosure review to prior art search, verification,
+                            and reporting. Streamlining complex steps to reduce manual effort without compromising
+                            depth.</p>
+                        <div
+                            style="margin-top: 24px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                            <img src="../../images/pro/advantage-workflow.png" alt="AI Workflow"
+                                style="width: 100%; height: auto; max-height: 300px; object-fit: contain; display: block;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="container footer-content">
+                <div class="footer-col">
+                    <span class="footer-logo">Goveda</span>
+                    <p>&copy; 2024 Goveda Inc.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Terms</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Security</a>
+                    <a href="#">Status</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

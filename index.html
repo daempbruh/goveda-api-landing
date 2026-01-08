@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GoVeda - Trusted Gateway to Global Innovation Knowledge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="/goveda-api-landing/assets/style-CibLJKxs.js"></script>
+  <script type="module" crossorigin src="/goveda-api-landing/assets/main-CkOFmxVC.js"></script>
+  <link rel="stylesheet" crossorigin href="/goveda-api-landing/assets/style-4NqXhFQg.css">
+</head>
+
+<body>
+  <div id="app">
+    <!-- Header -->
+    <header class="site-header">
+      <div class="container header-container">
+        <a href="./" class="logo" aria-label="Goveda Home">
+          <img src="logo.png" alt="Goveda" style="height: 180px;">
+        </a>
+        <nav class="main-nav">
+          <div class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle">
+              Product
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                class="chevron">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </a>
+            <div class="dropdown-menu">
+              <a href="products/api/" class="dropdown-item">OpenPatent Pro API</a>
+              <a href="products/openpatent-pro/" class="dropdown-item">OpenPatent Pro</a>
+              <a href="products/pro/" class="dropdown-item">GoVeda Pro</a>
+            </div>
+          </div>
+          <div class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle">
+              Solutions
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                class="chevron">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-section">
+                <span class="dropdown-header">Industries</span>
+                <a href="solutions/law-firms/" class="dropdown-item">Law Firms</a>
+                <a href="solutions/legaltech/" class="dropdown-item">LegalTech Companies</a>
+                <a href="solutions/tech-transfer/" class="dropdown-item">Tech Transfer Offices</a>
+                <a href="solutions/patent-offices/" class="dropdown-item">Patent Offices</a>
+                <a href="solutions/search-agencies/" class="dropdown-item">Patent Search Agencies</a>
+              </div>
+            </div>
+          </div>
+          <a href="pricing/" class="nav-link">Pricing</a>
+          <a href="learn/" class="nav-link">Learn</a>
+          <a href="http://goveda.com/contact" class="nav-link">Contact Us</a>
+        </nav>
+        <div class="header-actions">
+          <div id="auth-buttons" style="display: flex; gap: 12px;">
+            <button id="login-btn" class="btn btn-outline">Log in</button>
+            <a href="https://platform.goveda.com/signup" class="btn btn-primary">Sign Up</a>
+          </div>
+          <div id="user-menu" class="user-menu" style="display: none;">
+            <button id="user-menu-btn" class="user-menu-btn">
+              <div class="avatar-circle">JD</div>
+              <span class="username">John Doe</span>
+              <svg class="chevron-down" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+            <div id="user-dropdown" class="user-dropdown">
+              <div class="dropdown-header">Logged in as<br><strong style="color: var(--text-main);">John Doe</strong>
+              </div>
+              <div class="dropdown-divider"></div>
+              <a href="account/" class="dropdown-item">Account Management</a>
+              <div class="dropdown-divider"></div>
+              <button id="logout-btn" class="dropdown-item text-red"
+                style="width: 100%; text-align: left; background: none; border: none; cursor: pointer;">Log Out</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Hero -->
+    <section class="hero" style="text-align: center; padding: 120px 0; position: relative; overflow: hidden;">
+      <div class="blur-bg"></div>
+      <div class="container">
+        <h1
+          style="font-size: 3.5rem; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 24px; line-height: 1.1; color: var(--text-main);">
+          Your trusted gateway to <span style="color: #f97316;">global innovation knowledge</span>
+        </h1>
+        <p style="font-size: 1.15rem; color: var(--text-scnd); max-width: 800px; margin: 0 auto 48px;">
+          Use <span style="color: #f97316; font-weight: 500;">semantic search</span> with features, concepts, keywords,
+          or enter a <span style="color: #f97316; font-weight: 500;">patent number</span> to explore related patents.
+        </p>
+
+        <!-- Search Interface -->
+        <div class="search-container">
+          <textarea class="search-input-area"
+            placeholder="Search by idea, technical concept, product feature, or patent number."></textarea>
+
+          <div class="search-actions">
+            <div class="action-left">
+              <button class="btn-search">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                Search
+              </button>
+              <button class="action-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+                Report
+              </button>
+              <button class="action-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+                Ask
+              </button>
+            </div>
+
+            <button class="circle-arrow-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="helper-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polygon points="10 8 16 12 10 16 10 8"></polygon>
+          </svg>
+          how to use?
+        </div>
+
+        <!-- Example Cards -->
+        <div class="example-cards-row" style="grid-template-columns: repeat(4, 1fr);">
+          <div class="example-card">
+            <div class="example-text">On-device wake word detection using a compact neural net</div>
+            <div class="example-footer">
+              Use this example
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </div>
+          </div>
+          <div class="example-card">
+            <div class="example-text">Touch screen gesture control for device unlocking</div>
+            <div class="example-footer">
+              Use this example
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </div>
+          </div>
+          <div class="example-card">
+            <div
+              style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 24px; flex-grow: 1;">
+              <div class="example-text" style="font-family: 'Menlo', monospace; margin-bottom: 0;">TW201926562A</div>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                style="color: var(--text-scnd);">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </div>
+            <div class="example-footer">
+              Use this example
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </div>
+          </div>
+          <div class="example-card">
+            <div
+              style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 24px; flex-grow: 1;">
+              <div class="example-text" style="font-family: 'Menlo', monospace; margin-bottom: 0;">US20250100676A1</div>
+            </div>
+            <div class="example-footer">
+              Use this example
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Open Patent Stats Section -->
+    <section class="section-padding bg-light">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Open Patent</span>
+          <h2>Built for innovators worldwide</h2>
+        </div>
+
+        <div class="grid" style="grid-template-columns: repeat(3, 1fr); gap: 40px; text-align: center;">
+          <div class="stat-card">
+            <div style="font-size: 3.5rem; font-weight: 800; color: var(--primary); margin-bottom: 8px;">220M+</div>
+            <div style="font-size: 1.1rem; font-weight: 600; color: var(--text-main);">Patent Publications</div>
+            <p style="color: var(--text-scnd); font-size: 0.95rem; margin-top: 8px;">Access the world's most
+              comprehensive patent database.</p>
+          </div>
+          <div class="stat-card">
+            <div style="font-size: 3.5rem; font-weight: 800; color: var(--primary); margin-bottom: 8px;">108</div>
+            <div style="font-size: 1.1rem; font-weight: 600; color: var(--text-main);">Jurisdictions</div>
+            <p style="color: var(--text-scnd); font-size: 0.95rem; margin-top: 8px;">Global coverage including USPTO,
+              EPO, CNIPA, JPO, and KIPO.</p>
+          </div>
+          <div class="stat-card">
+            <div style="font-size: 3.5rem; font-weight: 800; color: var(--primary); margin-bottom: 8px;">Weekly</div>
+            <div style="font-size: 1.1rem; font-weight: 600; color: var(--text-main);">Updates</div>
+            <p style="color: var(--text-scnd); font-size: 0.95rem; margin-top: 8px;">Data is refreshed every week so you
+              are never behind.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- IPOS Section -->
+    <section class="section-padding">
+      <div class="container"
+        style="display: flex; align-items: center; justify-content: center; flex-direction: column; text-align: center;">
+        <div style="max-width: 800px;">
+          <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 24px;">Co-developing with IPOS</h2>
+          <p style="font-size: 1.25rem; color: var(--text-scnd); margin-bottom: 32px; line-height: 1.6;">
+            We are working with the <strong style="color: var(--text-main);">Intellectual Property Office of Singapore
+              (IPOS)</strong> to build next-generation AI tools for patent search and examination.
+          </p>
+          <div
+            style="display: inline-block; padding: 20px 40px; background: #f8fafc; border-radius: 12px; border: 1px solid var(--border);">
+            <span style="font-weight: 600; color: var(--text-scnd);">More details to follow soon.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <div class="footer-col">
+          <span class="footer-logo">Goveda</span>
+          <p>&copy; 2024 Goveda Inc.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#">Terms</a>
+          <a href="#">Privacy</a>
+          <a href="#">Security</a>
+          <a href="#">Status</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
