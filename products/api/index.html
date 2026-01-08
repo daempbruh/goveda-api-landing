@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="../../vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OpenPatent Pro API | Goveda</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="app">
+    <!-- Header -->
+    <header class="site-header">
+      <div class="container header-container">
+        <a href="../../" class="logo" aria-label="Goveda Home">
+          <img src="../../logo.png" alt="Goveda" style="height: 180px;">
+        </a>
+        <nav class="main-nav">
+          <div class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle">
+              Product
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                class="chevron">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </a>
+            <div class="dropdown-menu">
+              <a href="./" class="dropdown-item">OpenPatent Pro API</a>
+              <a href="../openpatent-pro/" class="dropdown-item">OpenPatent Pro</a>
+              <a href="../pro/" class="dropdown-item">GoVeda Pro</a>
+            </div>
+          </div>
+          <div class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle">
+              Solutions
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                class="chevron">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </a>
+            <div class="dropdown-menu">
+              <div class="dropdown-section">
+                <span class="dropdown-header">Industries</span>
+                <a href="../../solutions/law-firms/" class="dropdown-item">Law Firms</a>
+                <a href="../../solutions/legaltech/" class="dropdown-item">LegalTech Companies</a>
+                <a href="../../solutions/tech-transfer/" class="dropdown-item">Tech Transfer Offices</a>
+                <a href="../../solutions/patent-offices/" class="dropdown-item">Patent Offices</a>
+                <a href="../../solutions/search-agencies/" class="dropdown-item">Patent Search Agencies</a>
+              </div>
+            </div>
+          </div>
+          <a href="../../pricing/" class="nav-link">Pricing</a>
+          <a href="../../learn/" class="nav-link">Learn</a>
+          <a href="http://goveda.com/contact" class="nav-link">Contact Us</a>
+        </nav>
+        <div class="header-actions">
+          <div id="auth-buttons" style="display: flex; gap: 12px;">
+            <button id="login-btn" class="btn btn-outline">Log in</button>
+            <a href="https://platform.goveda.com/signup" class="btn btn-primary">Sign Up</a>
+          </div>
+          <div id="user-menu" class="user-menu" style="display: none;">
+            <button id="user-menu-btn" class="user-menu-btn">
+              <div class="avatar-circle">JD</div>
+              <span class="username">John Doe</span>
+              <svg class="chevron-down" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+            <div id="user-dropdown" class="user-dropdown">
+              <div class="dropdown-header">Logged in as<br><strong style="color: var(--text-main);">John Doe</strong>
+              </div>
+              <div class="dropdown-divider"></div>
+              <a href="../../account/" class="dropdown-item">Account Management</a>
+              <div class="dropdown-divider"></div>
+              <button id="logout-btn" class="dropdown-item text-red"
+                style="width: 100%; text-align: left; background: none; border: none; cursor: pointer;">Log Out</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <h1>Build with <span class="highlight">GoVeda OpenAPI</span></h1>
+          <p class="hero-subtext">
+            Seamlessly integrate global patent data into your applications.
+            Leverage our Search, Patent, and Report APIs to automate patent intelligence and discovery workflows.
+          </p>
+          <div class="hero-buttons">
+            <a href="https://openapi.goveda.com/api-references" class="btn btn-primary btn-large">
+              Read the Docs
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+            <a href="#overview" class="btn btn-outline btn-large">Get Started</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="code-window">
+            <div class="window-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <div class="window-body">
+              <pre><code><span class="keyword">GET</span> /api/patent/get <span class="dim">HTTP/1.1</span>
+<span class="header">Host:</span> openapi.goveda.com
+<span class="header">X-API-Key:</span> sk_goveda_...
+
+<span class="dim">// Unified Response</span>
+{
+  <span class="key">"code"</span>: <span class="number">200</span>,
+  <span class="key">"msg"</span>: <span class="string">"success"</span>,
+  <span class="key">"data"</span>: { ... }
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview" class="overview section-padding">
+      <div class="container">
+        <div class="overview-grid">
+          <div class="overview-content">
+            <span class="section-label">GoVeda OpenAPI</span>
+            <h2>Empower Your Application with Patent Intelligence</h2>
+            <p>
+              The GoVeda OpenAPI provides a comprehensive suite of endpoints to access global data of 220M+ patents from
+              108 countries.
+              Whether you need to retrieve specific patent details, perform complex batch searches, or generate
+              novelty reports, our API is designed for scale and reliability.
+            </p>
+          </div>
+          <div class="overview-visual">
+            <div class="feature-highlight-box">
+              <h3>Get Your API Key</h3>
+              <p>Start integrating GoVeda's patent intelligence today.</p>
+              <a href="https://platform.goveda.com/signup" class="btn btn-outline">Get Started</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Features Section -->
+    <section class="features section-padding bg-light">
+      <div class="container">
+        <div class="section-header text-left">
+          <h2>Leverage the broadest collection of patent data</h2>
+        </div>
+        <div class="features-list">
+          <div class="feature-item">
+            <div class="feature-icon">
+              <!-- Clock/Time Icon -->
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <div class="feature-text">
+              <h4>Unmatched Data Freshness</h4>
+              <p>Our data is updated weekly, with translated content available just 1 day after publication by patent
+                offices.</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon">
+              <!-- Document/Input Icon -->
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+            </div>
+            <div class="feature-text">
+              <h4>Flexible Query Inputs</h4>
+              <p>Search with queries as simple as a single sentence, or input a complete disclosure document.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">
+              <!-- Sliders/Precision Icon -->
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="4" y1="21" x2="4" y2="14"></line>
+                <line x1="4" y1="10" x2="4" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12" y2="3"></line>
+                <line x1="20" y1="21" x2="20" y2="16"></line>
+                <line x1="20" y1="12" x2="20" y2="3"></line>
+                <line x1="1" y1="14" x2="7" y2="14"></line>
+                <line x1="9" y1="8" x2="15" y2="8"></line>
+                <line x1="17" y1="16" x2="23" y2="16"></line>
+              </svg>
+            </div>
+            <div class="feature-text">
+              <h4>Fine-Tuned Precision</h4>
+              <p>Tailor your results by selecting exactly how many closest candidates to view, fro 10 to 1000.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Details -->
+    <section class="technical section-padding">
+      <div class="container technical-container">
+        <div class="tech-content">
+          <h2>Get Started in Minutes</h2>
+          <p>
+            Access some code samples and developer resources at our documentation page to get started.
+          </p>
+          <div class="tech-links">
+            <a href="https://openapi.goveda.com/api-references" class="link-arrow">
+              Get started
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <div class="footer-col">
+          <span class="footer-logo">Goveda</span>
+          <p>&copy; 2024 Goveda Inc.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#">Terms</a>
+          <a href="#">Privacy</a>
+          <a href="#">Security</a>
+          <a href="#">Status</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script type="module" src="../../src/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account Settings | Goveda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app">
+        <!-- Header (Forced Logged In State for Mock) -->
+        <header class="site-header">
+            <div class="container header-container">
+                <a href="../" class="logo" aria-label="Goveda Home">
+                    <img src="../logo.png" alt="Goveda" style="height: 180px;">
+                </a>
+                <nav class="main-nav">
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">
+                            Product
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" class="chevron">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="../products/api/" class="dropdown-item">OpenPatent Pro API</a>
+                            <a href="../products/openpatent-pro/" class="dropdown-item">OpenPatent Pro</a>
+                            <a href="../products/pro/" class="dropdown-item">GoVeda Pro</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">
+                            Solutions
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" class="chevron">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-section">
+                                <span class="dropdown-header">Industries</span>
+                                <a href="../solutions/law-firms/" class="dropdown-item">Law Firms</a>
+                                <a href="../solutions/legaltech/" class="dropdown-item">LegalTech Companies</a>
+                                <a href="../solutions/tech-transfer/" class="dropdown-item">Tech Transfer Offices</a>
+                                <a href="../solutions/patent-offices/" class="dropdown-item">Patent Offices</a>
+                                <a href="../solutions/search-agencies/" class="dropdown-item">Patent Search Agencies</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="../pricing/" class="nav-link">Pricing</a>
+                    <a href="../learn/" class="nav-link">Learn</a>
+                    <a href="http://goveda.com/contact" class="nav-link">Contact Us</a>
+                </nav>
+                <div class="header-actions">
+                    <div id="user-menu" class="user-menu">
+                        <button id="user-menu-btn" class="user-menu-btn">
+                            <div class="avatar-circle">JD</div>
+                            <span class="username">John Doe</span>
+                            <svg class="chevron-down" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </button>
+                        <div id="user-dropdown" class="user-dropdown">
+                            <div class="dropdown-header">Logged in as<br><strong style="color: var(--text-main);">John
+                                    Doe</strong>
+                            </div>
+                            <div class="dropdown-divider"></div>
+                            <a href="./" class="dropdown-item">Account Management</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="../" class="dropdown-item text-red">Log Out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Account Layout -->
+        <div class="container account-container">
+            <aside class="account-sidebar">
+                <nav class="sidebar-nav">
+                    <a href="#" class="sidebar-link active">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        General
+                    </a>
+                    <a href="#" class="sidebar-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                            <line x1="1" y1="10" x2="23" y2="10"></line>
+                        </svg>
+                        Billing & Plans
+                    </a>
+                    <a href="#" class="sidebar-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4">
+                            </path>
+                        </svg>
+                        API Keys
+                    </a>
+                    <a href="#" class="sidebar-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                        </svg>
+                        Notifications
+                    </a>
+                </nav>
+            </aside>
+
+            <main class="account-content">
+                <div class="settings-header">
+                    <h1>General Settings</h1>
+                    <p>Manage your account details and profile information.</p>
+                </div>
+
+                <div class="settings-section">
+                    <h3 class="section-title">Profile Information</h3>
+                    <div class="form-group">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-input" value="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" class="form-input" value="john.doe@example.com">
+                    </div>
+                </div>
+
+                <div class="settings-section">
+                    <h3 class="section-title">Security</h3>
+                    <div class="form-group">
+                        <label class="form-label">New Password</label>
+                        <input type="password" class="form-input" placeholder="Leave blank to keep current">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary">Save Changes</button>
+                    </div>
+                </div>
+
+                <div class="settings-section" style="border-top: 1px solid var(--border); padding-top: 32px;">
+                    <h3 class="section-title" style="color: #ef4444;">Danger Zone</h3>
+                    <p style="color: var(--text-scnd); margin-bottom: 16px;">
+                        Permanently delete your account and all of your data.
+                    </p>
+                    <button class="btn btn-outline" style="border-color: #ef4444; color: #ef4444;">Delete
+                        Account</button>
+                </div>
+            </main>
+        </div>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="container footer-content">
+                <div class="footer-col">
+                    <span class="footer-logo">Goveda</span>
+                    <p>&copy; 2026 Goveda Inc.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Terms</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Security</a>
+                    <a href="#">Status</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script type="module" src="../src/main.js"></script>
+    <script type="module" src="../src/account.js"></script>
+</body>
+
+</html>

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="../../vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Solutions for Tech Transfer | Goveda</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,94 +14,173 @@
         <!-- Header -->
         <header class="site-header">
             <div class="container header-container">
-                <a href="/" class="logo"><img src="/logo.png" alt="Goveda" style="height: 180px;"></a>
+                <a href="../../" class="logo"><img src="../../logo.png" alt="Goveda" style="height: 180px;"></a>
                 <nav class="main-nav">
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle active">Solutions</a>
+                        <a href="#" class="nav-link dropdown-toggle">
+                            Product
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" class="chevron">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="../../products/api/" class="dropdown-item">OpenPatent Pro API</a>
+                            <a href="../../products/openpatent-pro/" class="dropdown-item">OpenPatent Pro</a>
+                            <a href="../../products/pro/" class="dropdown-item">GoVeda Pro</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle active">
+                            Solutions
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" class="chevron">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </a>
                         <div class="dropdown-menu">
                             <div class="dropdown-section">
                                 <span class="dropdown-header">Industries</span>
-                                <a href="/solutions/law-firms/" class="dropdown-item">Law Firms</a>
-                                <a href="/solutions/legaltech/" class="dropdown-item">LegalTech Companies</a>
-                                <a href="/solutions/tech-transfer/" class="dropdown-item">Tech Transfer Offices</a>
-                                <a href="/solutions/patent-offices/" class="dropdown-item">Patent Offices</a>
-                                <a href="/solutions/search-agencies/" class="dropdown-item">Patent Search Agencies</a>
+                                <a href="../law-firms/" class="dropdown-item">Law Firms</a>
+                                <a href="../legaltech/" class="dropdown-item">LegalTech Companies</a>
+                                <a href="../tech-transfer/" class="dropdown-item">Tech Transfer Offices</a>
+                                <a href="../patent-offices/" class="dropdown-item">Patent Offices</a>
+                                <a href="../search-agencies/" class="dropdown-item">Patent Search Agencies</a>
                             </div>
                         </div>
                     </div>
-                    <a href="/pricing/" class="nav-link">Pricing</a>
-                    <a href="/learn/" class="nav-link">Learn</a>
+                    <a href="../../pricing/" class="nav-link">Pricing</a>
+                    <a href="../../learn/" class="nav-link">Learn</a>
                     <a href="http://goveda.com/contact" class="nav-link">Contact Us</a>
                 </nav>
                 <div class="header-actions">
-                    <a href="https://platform.goveda.com/login" class="btn btn-outline">Log in</a>
-                    <a href="https://platform.goveda.com/signup" class="btn btn-primary">Sign Up</a>
+                    <div id="auth-buttons" style="display: flex; gap: 12px;">
+                        <button id="login-btn" class="btn btn-outline">Log in</button>
+                        <a href="https://platform.goveda.com/signup" class="btn btn-primary">Sign Up</a>
+                    </div>
+                    <div id="user-menu" class="user-menu" style="display: none;">
+                        <button id="user-menu-btn" class="user-menu-btn">
+                            <div class="avatar-circle">JD</div>
+                            <span class="username">John Doe</span>
+                            <svg class="chevron-down" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </button>
+                        <div id="user-dropdown" class="user-dropdown">
+                            <div class="dropdown-header">Logged in as<br><strong style="color: var(--text-main);">John
+                                    Doe</strong>
+                            </div>
+                            <div class="dropdown-divider"></div>
+                            <a href="../../account/" class="dropdown-item">Account Management</a>
+                            <div class="dropdown-divider"></div>
+                            <button id="logout-btn" class="dropdown-item text-red"
+                                style="width: 100%; text-align: left; background: none; border: none; cursor: pointer;">Log
+                                Out</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>
 
         <!-- Hero -->
         <section class="solutions-hero">
-            <h1 class="solutions-title">Accelerate from Lab to Market</h1>
-            <p class="solutions-subtitle">Empower your TTO to evaluate invention disclosures faster and identify
-                commercial partners with precision.</p>
+            <h1 class="solutions-title">Make Faster, Smarter Patent Filing Decisions</h1>
+            <p class="solutions-subtitle">Technology Transfer Offices need to evaluate inventions quickly and
+                accurately. GoVeda helps TTOs assess novelty and patentability early, enabling better go/no-go
+                decisions.</p>
+            <div style="display: flex; justify-content: center; gap: 16px;">
+                <a href="http://goveda.com/contact" class="btn btn-primary"
+                    style="padding: 12px 32px; font-size: 1.1rem;">Book a demo</a>
+                <a href="https://platform.goveda.com/signup" class="btn btn-outline"
+                    style="padding: 12px 32px; font-size: 1.1rem; background: white;">Try Free</a>
+            </div>
         </section>
 
-        <!-- Process Timeline -->
+        <!-- Why Goveda (Timeline style adapted for benefits) -->
         <section class="timeline-section">
             <div class="container">
-                <h2 class="section-title">Streamline Your Evaluation Pipeline</h2>
+                <h2 class="section-title">Move Promising Innovations Forward with Clarity</h2>
                 <div class="timeline-steps">
                     <div class="timeline-step">
                         <div class="step-number">1</div>
-                        <h3 class="why-title">Disclosure</h3>
-                        <p class="why-desc">Upload entire invention disclosure documents. Our AI extracts key concepts
-                            automatically.</p>
+                        <h3 class="why-title">Cost-Effective Intelligence</h3>
+                        <p class="why-desc">Cost-effective access to global patent intelligence reducing reliance on
+                            outsourced searches.</p>
                     </div>
                     <div class="timeline-step">
                         <div class="step-number">2</div>
-                        <h3 class="why-title">Assessment</h3>
-                        <p class="why-desc">Instant prior art generation to validate novelty before spending on outside
-                            counsel.</p>
+                        <h3 class="why-title">Faster Assessments</h3>
+                        <p class="why-desc">Rapid novelty and patentability assessments to speed up evaluation cycles.
+                        </p>
                     </div>
                     <div class="timeline-step">
                         <div class="step-number">3</div>
-                        <h3 class="why-title">Strategy</h3>
-                        <p class="why-desc">Identify potential licensees and commercial partners based on patent
-                            citation networks.</p>
+                        <h3 class="why-title">Better Decisions</h3>
+                        <p class="why-desc">Improved decision-making for patent filings and early-stage screening.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Feature Split -->
+        <!-- Use Cases / Feature Split -->
         <section class="feature-section">
             <div class="container feature-row">
                 <div class="feature-content">
-                    <h3 class="feature-title">Do more with limited budget</h3>
-                    <p class="feature-desc">Don't waste funds filing on non-novel ideas. Goveda acts as your first line
-                        of defense, filtering out weak disclosures so you can focus resources on high-potential
-                        innovations.</p>
+                    <h3 class="feature-title">Why TTOs Choose GoVeda</h3>
+                    <p class="feature-desc">By providing examiner-validated global patent searches on a single platform,
+                        GoVeda accelerates innovation pipelines.</p>
                     <ul class="feature-list" style="list-style: none; padding: 0;">
                         <li style="margin-bottom: 12px; display: flex; gap: 10px;">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" style="color: var(--primary);">
                                 <polyline points="20 6 9 17 4 12" />
                             </svg>
-                            Reduce external search costs by 40%
+                            Invention disclosure evaluation
                         </li>
                         <li style="margin-bottom: 12px; display: flex; gap: 10px;">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" style="color: var(--primary);">
                                 <polyline points="20 6 9 17 4 12" />
                             </svg>
-                            Evaluate 3x more disclosures per month
+                            Pre-filing patentability checks
+                        </li>
+                        <li style="margin-bottom: 12px; display: flex; gap: 10px;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" style="color: var(--primary);">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            Licensing and commercialization support
+                        </li>
+                        <li style="margin-bottom: 12px; display: flex; gap: 10px;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" style="color: var(--primary);">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            Research landscape analysis
                         </li>
                     </ul>
                 </div>
                 <div class="feature-image">
-                    <img src="https://placehold.co/600x400/f3f4f6/1f2937?text=Budget+Optimization" alt="Budget Stats"
+                    <img src="../../images/solutions/tto-innovation-pipeline.png" alt="TTO Innovation Pipeline"
                         style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <h2 class="cta-title">Maximize the Value of Your University's IP Portfolio</h2>
+                <p class="cta-desc">Join leading TTOs using Goveda to evaluate disclosures faster and make data-driven
+                    filing decisions.</p>
+                <div style="display: flex; justify-content: center; gap: 16px; margin-top: 32px;">
+                    <a href="https://platform.goveda.com/signup" class="btn btn-primary"
+                        style="background: orange; color: black; padding: 16px 48px; font-size: 1.1rem;">Try for
+                        Free</a>
+                    <a href="http://goveda.com/contact" class="btn btn-outline"
+                        style="color: black; border-color: white; padding: 16px 48px; font-size: 1.1rem;">Contact
+                        Sales</a>
                 </div>
             </div>
         </section>
@@ -110,13 +189,13 @@
         <footer class="site-footer">
             <div class="container footer-content">
                 <div class="footer-col"><span class="footer-logo">Goveda</span>
-                    <p>&copy; 2024 Goveda Inc.</p>
+                    <p>&copy; 2026 Goveda Inc.</p>
                 </div>
                 <div class="footer-links"><a href="#">Terms</a><a href="#">Privacy</a><a href="#">Security</a></div>
             </div>
         </footer>
     </div>
-    <script type="module" src="/src/solutions.js"></script>
+    <script type="module" src="../../src/solutions.js"></script>
 </body>
 
 </html>

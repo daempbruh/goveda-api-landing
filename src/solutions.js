@@ -1,3 +1,4 @@
+import './main.js'
 import './style.css'
 import './solutions.css'
 

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="../vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pricing | Goveda</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,10 +16,24 @@
         <!-- Header (Dark Mode) -->
         <header class="site-header">
             <div class="container header-container">
-                <a href="/" class="logo" aria-label="Goveda Home">
-                    <img src="/logo.png" alt="Goveda" style="height: 180px;">
+                <a href="../" class="logo" aria-label="Goveda Home">
+                    <img src="../logo.png" alt="Goveda" style="height: 180px;">
                 </a>
                 <nav class="main-nav">
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">
+                            Product
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" class="chevron">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="../products/api/" class="dropdown-item">OpenPatent Pro API</a>
+                            <a href="../products/openpatent-pro/" class="dropdown-item">OpenPatent Pro</a>
+                            <a href="../products/pro/" class="dropdown-item">GoVeda Pro</a>
+                        </div>
+                    </div>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle">
                             Solutions
@@ -31,21 +45,43 @@
                         <div class="dropdown-menu">
                             <div class="dropdown-section">
                                 <span class="dropdown-header">Industries</span>
-                                <a href="/solutions/law-firms/" class="dropdown-item">Law Firms</a>
-                                <a href="/solutions/legaltech/" class="dropdown-item">LegalTech Companies</a>
-                                <a href="/solutions/tech-transfer/" class="dropdown-item">Tech Transfer Offices</a>
-                                <a href="/solutions/patent-offices/" class="dropdown-item">Patent Offices</a>
-                                <a href="/solutions/search-agencies/" class="dropdown-item">Patent Search Agencies</a>
+                                <a href="../solutions/law-firms/" class="dropdown-item">Law Firms</a>
+                                <a href="../solutions/legaltech/" class="dropdown-item">LegalTech Companies</a>
+                                <a href="../solutions/tech-transfer/" class="dropdown-item">Tech Transfer Offices</a>
+                                <a href="../solutions/patent-offices/" class="dropdown-item">Patent Offices</a>
+                                <a href="../solutions/search-agencies/" class="dropdown-item">Patent Search Agencies</a>
                             </div>
                         </div>
                     </div>
-                    <a href="/pricing/" class="nav-link active">Pricing</a>
-                    <a href="/learn/" class="nav-link">Learn</a>
+                    <a href="./" class="nav-link active">Pricing</a>
+                    <a href="../learn/" class="nav-link">Learn</a>
                     <a href="http://goveda.com/contact" class="nav-link">Contact Us</a>
                 </nav>
                 <div class="header-actions">
-                    <a href="https://platform.goveda.com/login" class="btn btn-outline">Log in</a>
-                    <a href="https://platform.goveda.com/signup" class="btn btn-primary">Sign Up</a>
+                    <div id="auth-buttons" style="display: flex; gap: 12px;">
+                        <button id="login-btn" class="btn btn-outline">Log in</button>
+                        <a href="https://platform.goveda.com/signup" class="btn btn-primary">Sign Up</a>
+                    </div>
+                    <div id="user-menu" class="user-menu" style="display: none;">
+                        <button id="user-menu-btn" class="user-menu-btn">
+                            <div class="avatar-circle">JD</div>
+                            <span class="username">John Doe</span>
+                            <svg class="chevron-down" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </button>
+                        <div id="user-dropdown" class="user-dropdown">
+                            <div class="dropdown-header">Logged in as<br><strong style="color: var(--text-main);">John
+                                    Doe</strong></div>
+                            <div class="dropdown-divider"></div>
+                            <a href="../account/" class="dropdown-item">Account Management</a>
+                            <div class="dropdown-divider"></div>
+                            <button id="logout-btn" class="dropdown-item text-red"
+                                style="width: 100%; text-align: left; background: none; border: none; cursor: pointer;">Log
+                                Out</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>
@@ -54,16 +90,16 @@
         <section class="pricing-hero">
             <h1 class="pricing-title">Pricing</h1>
 
-            <div class="pricing-toggle">
-                <button class="toggle-btn active" data-target="individual">Individual</button>
-                <button class="toggle-btn" data-target="team">Team & Enterprise</button>
-                <button class="toggle-btn" data-target="api">API</button>
-            </div>
+            <p class="pricing-subtitle"
+                style="margin-top: 24px; color: var(--text-scnd); font-size: 1.1rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Start for free, and upgrade your usage as your needs evolve.
+            </p>
+
         </section>
 
         <!-- Individual Grid -->
         <section id="individual-grid" class="container pricing-grid">
-            <!-- Free Card -->
+            <!-- OpenPatent Card -->
             <div class="pricing-card">
                 <div class="card-icon">
                     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
@@ -71,12 +107,12 @@
                         <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
                     </svg>
                 </div>
-                <h3 class="card-title">Free</h3>
-                <p class="card-desc">Try Goveda</p>
+                <h3 class="card-title">OpenPatent</h3>
+                <p class="card-desc">Perform basic, but powerful searches</p>
                 <div class="price">$0</div>
-                <p class="price-detail">Free for everyone</p>
+                <p class="price-detail">No login required</p>
 
-                <button class="btn-card">Try Goveda</button>
+                <button class="btn-card">Get Started</button>
 
                 <ul class="feature-list">
                     <li>
@@ -84,26 +120,33 @@
                             stroke="currentColor" stroke-width="2">
                             <polyline points="20 6 9 17 4 12" />
                         </svg>
-                        Access to semantic patent search
+                        Full access to OpenPatent's library of 220M+ patents worldwide
                     </li>
                     <li>
                         <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2">
                             <polyline points="20 6 9 17 4 12" />
                         </svg>
-                        Unlimited number of queries
+                        Unlimited semantic patent searches, capped at 500 characters per query
                     </li>
                     <li>
                         <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2">
                             <polyline points="20 6 9 17 4 12" />
                         </svg>
-                        Character cap of 500 per query
+                        Unlimited prior art searches, capped at 500 characters per query
+                    </li>
+                    <li>
+                        <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        Partially redacted, examiner-grade novelty reports for all prior art searches
                     </li>
                 </ul>
             </div>
 
-            <!-- Pro Card -->
+            <!-- OpenPatent Pro Card -->
             <div class="pricing-card">
                 <div class="card-icon">
                     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
@@ -112,21 +155,26 @@
                         <polyline points="2 12 12 17 22 12"></polyline>
                     </svg>
                 </div>
-                <h3 class="card-title">Pro</h3>
-                <p class="card-desc">For everyday professionals</p>
-                <div class="price">$19</div>
-                <p class="price-detail">Per month with annual subscription. $29 if billed monthly.</p>
+                <h3 class="card-title">OpenPatent Pro</h3>
+                <p class="card-desc">Best for IP professionals and builders</p>
+                <div class="price">$<span id="pro-price">39</span>
+                </div>
+                <p class="price-detail">Per month, billed monthly</p>
 
-                <button class="btn-card">Get Started</button>
 
-                <p class="features-label">Everything in Free, plus:</p>
+
+
+                <button class="btn-card">Try Free for 14 days</button>
+
+                <p class="features-label">Everything in OpenPatent, plus:</p>
+
                 <ul class="feature-list">
                     <li>
                         <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2">
                             <polyline points="20 6 9 17 4 12" />
                         </svg>
-                        More usage, with options to replenish credits*
+                        Upgrade your usage by purchasing credits as needed
                     </li>
                     <li>
                         <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
@@ -147,43 +195,7 @@
                             stroke="currentColor" stroke-width="2">
                             <polyline points="20 6 9 17 4 12" />
                         </svg>
-                        Priority access at high traffic times
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Max Card -->
-            <div class="pricing-card">
-                <div class="card-icon">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                        <polyline points="2 12 12 17 22 12"></polyline>
-                        <polyline points="2 17 12 22 22 17"></polyline>
-                    </svg>
-                </div>
-                <h3 class="card-title">Max</h3>
-                <p class="card-desc">Get the most out of GoVeda</p>
-                <div class="price">From $99</div>
-                <p class="price-detail">Per month with annual subscription. $119 if billed monthly.</p>
-
-                <button class="btn-card">Contact Sales</button>
-
-                <p class="features-label">Everything in Pro, plus:</p>
-                <ul class="feature-list">
-                    <li>
-                        <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2">
-                            <polyline points="20 6 9 17 4 12" />
-                        </svg>
-                        Choose from 5x more usage than Pro, with options to replenish credits*
-                    </li>
-                    <li>
-                        <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2">
-                            <polyline points="20 6 9 17 4 12" />
-                        </svg>
-                        Generation of examiner-grade novelty and FTO reports
+                        Generation of examiner-grade novelty and inventive step reports
                     </li>
                     <li>
                         <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
@@ -197,273 +209,93 @@
                             stroke="currentColor" stroke-width="2">
                             <polyline points="20 6 9 17 4 12" />
                         </svg>
-                        Highest priority access at high traffic times
+                        Priority access at high traffic times
+                    </li>
+                    <li>
+                        <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        API Access
+                    </li>
+                </ul>
+            </div>
+
+            <!-- GoVeda Pro Card -->
+            <div class="pricing-card">
+                <div class="card-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                        <polyline points="2 12 12 17 22 12"></polyline>
+                        <polyline points="2 17 12 22 22 17"></polyline>
+                    </svg>
+                </div>
+                <h3 class="card-title">GoVeda Pro</h3>
+                <p class="card-desc">Best for patent office examiners</p>
+                <div class="price">Contact Us</div>
+                <p class="price-detail">Customizable solutions per your needs</p>
+
+                <button class="btn-card">Contact Us</button>
+
+                <p class="features-label">Everything in OpenPatent Pro, plus:</p>
+                <ul class="feature-list">
+                    <li>
+                        <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        Custom-build your workflow to review patent applications
+                    </li>
+                    <li>
+                        <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        AI-assisted X/Y document prior art searches specific to your application
+                    </li>
+                    <li>
+                        <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        AI-assisted claim charting and analysis
+                    </li>
+                    <li>
+                        <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        Generation of customizable Written Opinions
+                    </li>
+                    <li>
+                        <svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        AI-native chatbot to assist patent examination tasks
                     </li>
                 </ul>
             </div>
         </section>
 
-        <!-- Team & Enterprise Grid -->
-        <section id="team-grid" class="container pricing-grid" style="display: none;">
-            <!-- Team Card -->
-            <div class="pricing-card">
-                <div class="card-icon">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M3 21h18M5 21V7l8-4 8 4v14M8 21v-4h8v4" />
-                    </svg>
-                </div>
-                <h3 class="card-title">Team</h3>
-                <p class="card-desc">For collaboration across teams</p>
-
-                <button class="btn-card">Create a Team plan</button>
-
-                <div class="price-row"
-                    style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px;">
-                    <div>
-                        <div style="font-weight: 700; font-size: 1.1rem; color: var(--text-main);">Pro Seats</div>
-                        <div style="font-size: 0.85rem; color: var(--text-scnd);">Every seat collaborates on Pro across
-                            accounts</div>
-                    </div>
-                    <div class="price" style="font-size: 1.5rem;">$29</div>
-                </div>
-                <p class="price-detail">Per person / month with annual subscription discount. $39 if billed monthly.
-                    Minimum 5 members.</p>
-
-                <div class="price-row"
-                    style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; margin-top: 16px;">
-                    <div>
-                        <div style="font-weight: 700; font-size: 1.1rem; color: var(--text-main);">Max Seats</div>
-                        <div style="font-size: 0.85rem; color: var(--text-scnd);">Every seat collaborates on Max across
-                            accounts</div>
-                    </div>
-                    <div class="price" style="font-size: 1.5rem;">$149</div>
-                </div>
-                <p class="price-detail">Per person / month with annual subscription discount. $169 if billed monthly.
-                    Minimum 5 members.</p>
-
-                <hr style="border: 0; border-top: 1px solid var(--border); margin: 24px 0;">
-
-                <ul class="feature-list">
-                    <li><svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2">
-                            <polyline points="20 6 9 17 4 12" />
-                        </svg>Credit allotment per account matches those of individual plans, with options to replenish
-                        credits*</li>
-                    <li><svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2">
-                            <polyline points="20 6 9 17 4 12" />
-                        </svg>Team workspaces for cross collaboration and management</li>
-                    <li><svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2">
-                            <polyline points="20 6 9 17 4 12" />
-                        </svg>Shared credit balances for team-wide usage, with account limits</li>
-                    <li><svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2">
-                            <polyline points="20 6 9 17 4 12" />
-                        </svg>Centralized billing and administration</li>
-                    <li><svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2">
-                            <polyline points="20 6 9 17 4 12" />
-                        </svg>Priority support </li>
-                </ul>
-            </div>
-
-            <!-- Enterprise Card -->
-            <div class="pricing-card">
-                <div class="card-icon">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M6 21v-8a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8" />
-                        <path d="M6 10V5a2 2 0 0 1 2-2h4" />
-                        <path d="M12 3v18" />
-                        <path d="M16 21v-4" />
-                        <path d="M8 21v-4" />
-                    </svg>
-                </div>
-                <h3 class="card-title">Enterprise</h3>
-                <p class="card-desc">For businesses operating at scale</p>
-
-                <button class="btn-card">Contact sales</button>
-
-                <p class="features-label">Everything in Team, plus:</p>
-                <ul class="feature-list">
-                    <li><svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2">
-                            <polyline points="20 6 9 17 4 12" />
-                        </svg>Customizable usage allotment per account per your needs</li>
-                    <li><svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2">
-                            <polyline points="20 6 9 17 4 12" />
-                        </svg>Customizable context window per your needs</li>
-                    <li><svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2">
-                            <polyline points="20 6 9 17 4 12" />
-                        </svg>Role-based access with fine-grained permissioning</li>
-                    <li><svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2">
-                            <polyline points="20 6 9 17 4 12" />
-                        </svg>Search reports generated by every account</li>
-                    <li><svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2">
-                            <polyline points="20 6 9 17 4 12" />
-                        </svg>Usage API for observability and monitoring</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- API Grid and Calculator -->
-        <div id="api-grid" style="display: none;">
-            <section class="container pricing-grid">
-                <!-- Basic Card -->
-                <div class="pricing-card">
-                    <div class="card-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                            <line x1="8" y1="21" x2="16" y2="21"></line>
-                            <line x1="12" y1="17" x2="12" y2="21"></line>
-                        </svg>
-                    </div>
-                    <h3 class="card-title">Basic</h3>
-                    <p class="card-desc">For starters</p>
-                    <div class="price">$100/mo</div>
-                    <p class="price-detail">2,500 monthly credits</p>
-                    <button class="btn-card">Purchase Basic</button>
-                    <ul class="feature-list">
-                        <li><svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg>Standard API Access</li>
-                    </ul>
-                </div>
-
-                <!-- Plus Card -->
-                <div class="pricing-card">
-                    <div class="card-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
-                            <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
-                            <line x1="6" y1="6" x2="6.01" y2="6"></line>
-                            <line x1="6" y1="18" x2="6.01" y2="18"></line>
-                        </svg>
-                    </div>
-                    <h3 class="card-title">Plus</h3>
-                    <p class="card-desc">For scaling apps</p>
-                    <div class="price">$800/mo</div>
-                    <p class="price-detail">22,000 monthly credits</p>
-                    <button class="btn-card">Purchase Plus</button>
-                    <ul class="feature-list">
-                        <li><svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg>Higher Rate Limits</li>
-                    </ul>
-                </div>
-
-                <!-- Pro Card -->
-                <div class="pricing-card">
-                    <div class="card-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
-                            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
-                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
-                        </svg>
-                    </div>
-                    <h3 class="card-title">Pro</h3>
-                    <p class="card-desc">For large scale needs</p>
-                    <div class="price">$2,000/mo</div>
-                    <p class="price-detail">60,000 monthly credits</p>
-                    <button class="btn-card">Purchase Pro</button>
-                    <ul class="feature-list">
-                        <li><svg class="check-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg>Priority Support</li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- Calculator Section -->
-            <section class="container calculator-section"
-                style="max-width: 1000px; margin: 0 auto 100px; padding: 0 20px;">
-                <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 24px;">Credit Calculator</h3>
-                <div class="calculator-grid">
-                    <div class="calc-item">
-                        <div class="calc-header"
-                            style="display: flex; justify-content: space-between; margin-bottom: 8px;">
-                            <label>Retrieve basic patent data</label>
-                        </div>
-                        <input type="range" min="0" max="1000" value="0" class="calc-slider" data-cost="3.6" step="10">
-                        <div class="calc-val-display">0 units</div>
-                    </div>
-
-                    <div class="calc-item">
-                        <div class="calc-header"
-                            style="display: flex; justify-content: space-between; margin-bottom: 8px;">
-                            <label>Semantic Search (Top 10)</label>
-                        </div>
-                        <input type="range" min="0" max="500" value="0" class="calc-slider" data-cost="50" step="5">
-                        <div class="calc-val-display">0 units</div>
-                    </div>
-
-                    <div class="calc-item">
-                        <div class="calc-header"
-                            style="display: flex; justify-content: space-between; margin-bottom: 8px;">
-                            <label>Semantic Search (Top 100)</label>
-                        </div>
-                        <input type="range" min="0" max="200" value="0" class="calc-slider" data-cost="380" step="1">
-                        <div class="calc-val-display">0 units</div>
-                    </div>
-
-                    <div class="calc-item">
-                        <div class="calc-header"
-                            style="display: flex; justify-content: space-between; margin-bottom: 8px;">
-                            <label>Semantic Search (Top 1000)</label>
-                        </div>
-                        <input type="range" min="0" max="100" value="0" class="calc-slider" data-cost="710">
-                        <div class="calc-val-display">0 units</div>
-                    </div>
-
-                    <div class="calc-item">
-                        <div class="calc-header"
-                            style="display: flex; justify-content: space-between; margin-bottom: 8px;">
-                            <label>Novelty Report</label>
-                        </div>
-                        <input type="range" min="0" max="50" value="0" class="calc-slider" data-cost="720">
-                        <div class="calc-val-display">0 units</div>
-                    </div>
-
-                    <div class="calc-item">
-                        <div class="calc-header"
-                            style="display: flex; justify-content: space-between; margin-bottom: 8px;">
-                            <label>Inventive Step Report</label>
-                        </div>
-                        <input type="range" min="0" max="50" value="0" class="calc-slider" data-cost="950">
-                        <div class="calc-val-display">0 units</div>
-                    </div>
-                </div>
-
-                <div class="calc-total"
-                    style="margin-top: 32px; padding: 24px; background: #f4f4f5; border-radius: 12px; text-align: center;">
-                    <div style="font-size: 1rem; color: var(--text-scnd); margin-bottom: 8px;">Total Estimated Monthly
-                        Usage
-                    </div>
-                    <div class="total-credits" style="font-size: 2.5rem; font-weight: 800; color: var(--primary);">0
-                        Credits</div>
-                </div>
-
-                <div class="api-actions" style="margin-top: 40px; display: flex; justify-content: center; gap: 16px;">
-                    <a href="http://goveda.com/contact" class="btn btn-primary"
-                        style="padding: 12px 32px; font-size: 1rem;">Contact Sales</a>
-                    <a href="https://openapi.goveda.com/api-references" class="btn btn-outline"
-                        style="padding: 12px 32px; font-size: 1rem; color: var(--text-main); border-color: var(--border);">Read
-                        the Docs</a>
-                </div>
-            </section>
+        <div style="text-align: center; margin-top: 80px; margin-bottom: 32px;">
+            <h2 style="font-size: 1.75rem; font-weight: 700; margin-bottom: 12px; color: var(--text-main);">Looking for
+                other
+                enterprise solutions?</h2>
+            <p style="color: var(--text-scnd); font-size: 1.1rem; max-width: 600px; margin: 0 auto;">
+                Get in touch for custom volume licensing, or start building directly with our API.
+            </p>
         </div>
+
+        <div class="api-actions" style="margin-top: 0; display: flex; justify-content: center; gap: 16px;">
+            <a href="http://goveda.com/contact" class="btn btn-primary"
+                style="padding: 12px 32px; font-size: 1rem;">Contact Sales</a>
+            <a href="https://openapi.goveda.com/api-references" class="btn btn-outline"
+                style="padding: 12px 32px; font-size: 1rem; color: var(--text-main); border-color: var(--border);">
+                Get Started</a>
+        </div>
+        </section>
 
         <!-- Footer -->
         <footer class="site-footer">
@@ -481,7 +313,7 @@
             </div>
         </footer>
     </div>
-    <script type="module" src="/src/pricing.js"></script>
+    <script type="module" src="../src/pricing.js"></script>
 </body>
 
 </html>

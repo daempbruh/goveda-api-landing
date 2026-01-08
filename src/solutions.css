@@ -311,3 +311,85 @@
     justify-content: center;
     flex-shrink: 0;
 }
+
+/* Vertical Marquee Animation */
+.marquee-container {
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    background: #f8fafc;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    display: flex;
+    justify-content: center;
+}
+
+.marquee-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+    animation: scroll-vertical 20s linear infinite;
+}
+
+.marquee-content:hover {
+    animation-play-state: paused;
+}
+
+.marquee-item {
+    background: white;
+    padding: 16px 24px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    min-width: 280px;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.marquee-item:hover {
+    transform: scale(1.02);
+    border-color: var(--primary);
+}
+
+.office-logo {
+    width: 40px;
+    height: 40px;
+    background: #f1f5f9;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: var(--primary);
+    font-size: 0.8rem;
+    flex-shrink: 0;
+}
+
+.office-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.office-name {
+    font-weight: 600;
+    color: var(--text-main);
+    font-size: 0.95rem;
+}
+
+.office-region {
+    font-size: 0.8rem;
+    color: var(--text-scnd);
+}
+
+@keyframes scroll-vertical {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-50%);
+    }
+}

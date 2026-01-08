@@ -1,37 +1,8 @@
+import './main.js'
 import './style.css'
 import './pricing.css'
 
 document.addEventListener('DOMContentLoaded', () => {
-    const toggles = document.querySelectorAll('.toggle-btn');
-    const sections = {
-        'individual': document.getElementById('individual-grid'),
-        'team': document.getElementById('team-grid'),
-        'api': document.getElementById('api-grid')
-    };
-
-    toggles.forEach(toggle => {
-        toggle.addEventListener('click', () => {
-            const target = toggle.dataset.target;
-
-            // Update active state
-            toggles.forEach(t => t.classList.remove('active'));
-            toggle.classList.add('active');
-
-            // Show proper section
-            Object.values(sections).forEach(section => {
-                if (section) section.style.display = 'none';
-            });
-
-            if (sections[target]) {
-                if (target === 'api') {
-                    sections[target].style.display = 'block'; // API grid wraps section+calc
-                } else {
-                    sections[target].style.display = 'grid';
-                }
-            }
-        });
-    });
-
     // Calculator Logic
     const sliders = document.querySelectorAll('.calc-slider');
     const totalDisplay = document.querySelector('.total-credits');
@@ -58,4 +29,46 @@ document.addEventListener('DOMContentLoaded', () => {
     sliders.forEach(slider => {
         slider.addEventListener('input', calculateTotal);
     });
+
+
+    // Auth UI Logic
+    const loginBtn = document.getElementById('login-btn');
+    const logoutBtn = document.getElementById('logout-btn');
+    const authButtons = document.getElementById('auth-buttons');
+    const userMenu = document.getElementById('user-menu');
+    const userMenuBtn = document.getElementById('user-menu-btn');
+    const userDropdown = document.getElementById('user-dropdown');
+
+    if (loginBtn && authButtons && userMenu) {
+        // Mock Login
+        loginBtn.addEventListener('click', () => {
+            authButtons.style.display = 'none';
+            userMenu.style.display = 'flex';
+
+            // Update simple link to real page
+            const accountLink = userDropdown.querySelector('a.dropdown-item');
+            if (accountLink) accountLink.href = '../account/';
+        });
+
+        // Mock Logout
+        logoutBtn.addEventListener('click', () => {
+            userMenu.style.display = 'none';
+            authButtons.style.display = 'flex';
+            userDropdown.classList.remove('show');
+        });
+
+        // Toggle User Dropdown
+        userMenuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            userDropdown.classList.toggle('show');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!userMenu.contains(e.target)) {
+                userDropdown.classList.remove('show');
+            }
+        });
+    }
+
 });

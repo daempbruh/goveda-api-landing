@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="../../vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Solutions for Law Firms | Goveda</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,10 +16,24 @@
         <!-- Header -->
         <header class="site-header">
             <div class="container header-container">
-                <a href="/" class="logo" aria-label="Goveda Home">
-                    <img src="/logo.png" alt="Goveda" style="height: 180px;">
+                <a href="../../" class="logo" aria-label="Goveda Home">
+                    <img src="../../logo.png" alt="Goveda" style="height: 180px;">
                 </a>
                 <nav class="main-nav">
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">
+                            Product
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" class="chevron">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="../../products/api/" class="dropdown-item">OpenPatent Pro API</a>
+                            <a href="../../products/openpatent-pro/" class="dropdown-item">OpenPatent Pro</a>
+                            <a href="../../products/pro/" class="dropdown-item">GoVeda Pro</a>
+                        </div>
+                    </div>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle active">
                             Solutions
@@ -31,79 +45,101 @@
                         <div class="dropdown-menu">
                             <div class="dropdown-section">
                                 <span class="dropdown-header">Industries</span>
-                                <a href="/solutions/law-firms/" class="dropdown-item">Law Firms</a>
-                                <a href="/solutions/legaltech/" class="dropdown-item">LegalTech Companies</a>
-                                <a href="/solutions/tech-transfer/" class="dropdown-item">Tech Transfer Offices</a>
-                                <a href="/solutions/patent-offices/" class="dropdown-item">Patent Offices</a>
-                                <a href="/solutions/search-agencies/" class="dropdown-item">Patent Search Agencies</a>
+                                <a href="../law-firms/" class="dropdown-item">Law Firms</a>
+                                <a href="../legaltech/" class="dropdown-item">LegalTech Companies</a>
+                                <a href="../tech-transfer/" class="dropdown-item">Tech Transfer Offices</a>
+                                <a href="../patent-offices/" class="dropdown-item">Patent Offices</a>
+                                <a href="../search-agencies/" class="dropdown-item">Patent Search Agencies</a>
                             </div>
                         </div>
                     </div>
-                    <a href="/pricing/" class="nav-link">Pricing</a>
-                    <a href="/learn/" class="nav-link">Learn</a>
+                    <a href="../../pricing/" class="nav-link">Pricing</a>
+                    <a href="../../learn/" class="nav-link">Learn</a>
                     <a href="http://goveda.com/contact" class="nav-link">Contact Us</a>
                 </nav>
                 <div class="header-actions">
-                    <a href="https://platform.goveda.com/login" class="btn btn-outline">Log in</a>
-                    <a href="https://platform.goveda.com/signup" class="btn btn-primary">Sign Up</a>
+                    <div id="auth-buttons" style="display: flex; gap: 12px;">
+                        <button id="login-btn" class="btn btn-outline">Log in</button>
+                        <a href="https://platform.goveda.com/signup" class="btn btn-primary">Sign Up</a>
+                    </div>
+                    <div id="user-menu" class="user-menu" style="display: none;">
+                        <button id="user-menu-btn" class="user-menu-btn">
+                            <div class="avatar-circle">JD</div>
+                            <span class="username">John Doe</span>
+                            <svg class="chevron-down" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </button>
+                        <div id="user-dropdown" class="user-dropdown">
+                            <div class="dropdown-header">Logged in as<br><strong style="color: var(--text-main);">John
+                                    Doe</strong>
+                            </div>
+                            <div class="dropdown-divider"></div>
+                            <a href="../../account/" class="dropdown-item">Account Management</a>
+                            <div class="dropdown-divider"></div>
+                            <button id="logout-btn" class="dropdown-item text-red"
+                                style="width: 100%; text-align: left; background: none; border: none; cursor: pointer;">Log
+                                Out</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>
 
         <!-- Hero -->
         <section class="solutions-hero">
-            <h1 class="solutions-title">Leverage advanced AI for Law Firms</h1>
-            <p class="solutions-subtitle">Maximize efficiency for more billable hours with Goveda's industry-leading IP
-                intelligence platform.</p>
+            <h1 class="solutions-title">AI-Native Patent Searches. Meet OpenPatent.</h1>
+            <p class="solutions-subtitle">Conduct comprehensive, examiner-grade patent searches at a fraction of the
+                time needed with OpenPatent.</p>
             <div style="display: flex; justify-content: center; gap: 16px;">
                 <a href="http://goveda.com/contact" class="btn btn-primary"
-                    style="padding: 12px 32px; font-size: 1.1rem;">Book a demo</a>
+                    style="padding: 12px 32px; font-size: 1.1rem;">Try Free</a>
             </div>
         </section>
 
         <!-- Why Goveda Section -->
         <section class="why-section">
             <div class="container">
-                <h2 class="section-title">Improve efficiency and drive growth</h2>
+                <h2 class="section-title">Search with Confidence. Defend with Certainty.</h2>
                 <div class="why-grid">
                     <div class="why-card">
                         <div class="why-icon">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2">
-                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                             </svg>
                         </div>
-                        <h3 class="why-title">AI built for IP use cases</h3>
-                        <p class="why-desc">10x your speed of review, analysis, and searches (semantic, keyword, and
-                            more) with AI designed specifically for patent workflows.</p>
+                        <h3 class="why-title">Examiner-Validated Quality</h3>
+                        <p class="why-desc">Built in collaboration with the Intellectual Property Office of Singapore
+                            (IPOS). Deliver search reports to your clients you can rely with ease. </p>
                     </div>
                     <div class="why-card">
                         <div class="why-icon">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
                                 <path
-                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
-                                <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
-                                <line x1="12" y1="22.08" x2="12" y2="12" />
+                                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                                </path>
                             </svg>
                         </div>
-                        <h3 class="why-title">Best-in-class IP data coverage</h3>
-                        <p class="why-desc">Access one of the largest global databases of patent, litigation, and
-                            non-patent literature with AI-enabled precision.</p>
+                        <h3 class="why-title">Comprehensive Global Coverage</h3>
+                        <p class="why-desc">Access more than 220M+ patents on OpenPatent. No
+                            more juggling between multiple free and paid sites.</p>
                     </div>
                     <div class="why-card">
                         <div class="why-icon">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2">
-                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                                <circle cx="9" cy="7" r="4" />
-                                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-                                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                <polyline points="13 2 13 9 20 9"></polyline>
+                                <path d="M13 21H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h10l5 5v11a2 2 0 0 1-2 2z"></path>
                             </svg>
                         </div>
-                        <h3 class="why-title">Long-term technology partnership</h3>
-                        <p class="why-desc">Goveda invests continuously in product innovation, ensuring our SaaS
-                            platform evolves to keep you ahead of the curve.</p>
+                        <h3 class="why-title">Faster Turnaround</h3>
+                        <p class="why-desc">Accelerate Prior Art, FTO, and Invalidity searches. Reduce research time
+                            and improve margins on client deliverables.</p>
                     </div>
                 </div>
             </div>
@@ -116,82 +152,182 @@
                 <!-- Feature 1 -->
                 <div class="feature-row">
                     <div class="feature-content">
-                        <h3 class="feature-title">AI Insight</h3>
-                        <p class="feature-desc">Save time with AI that compares claims & summarizes file wrappers.
-                            Goveda's proprietary AI helps you quickly discern differences in protection strategies.</p>
+                        <h3 class="feature-title">Prior Art & Novelty Searches</h3>
+                        <p class="feature-desc">Do away with inconsistent and unreliable search quality. Perform
+                            prosecution-ready searches with AI algorithms designed for and validated by patent
+                            examiners.</p>
                         <div class="feature-list-item">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" style="color: var(--primary); min-width: 20px;">
                                 <polyline points="20 6 9 17 4 12" />
                             </svg>
-                            <span>Auto-summarized file wrappers</span>
+                            <span>Examiner-grade accuracy and speed</span>
                         </div>
                         <div class="feature-list-item">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" style="color: var(--primary); min-width: 20px;">
                                 <polyline points="20 6 9 17 4 12" />
                             </svg>
-                            <span>Quickly discern protection strategies</span>
+                            <span>Reduce missed prior art and provide greater certainty in finding prior art</span>
                         </div>
                     </div>
                     <div class="feature-image">
-                        <!-- Placeholder for Feature Image -->
-                        <img src="https://placehold.co/600x400/f3f4f6/1f2937?text=AI+Insight+Dashboard" alt="AI Insight"
-                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+                        <img src="../../images/solutions/novelty-search.png" alt="OpenPatent Novelty Search Interface"
+                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border: 1px solid var(--border);">
                     </div>
                 </div>
 
-                <!-- Feature 2 -->
+                <!-- Feature 2: Data Coverage -->
                 <div class="feature-row reverse">
                     <div class="feature-content">
-                        <h3 class="feature-title">Collaboration & Development</h3>
-                        <p class="feature-desc">Share progress with your clients using shared Workspaces. Offer
-                            feedback, comments, and keep up-to-date on competitive landscapes.</p>
+                        <h3 class="feature-title">Unrivaled Global Data Coverage</h3>
+                        <p class="feature-desc">Freedom-to-Operate and clearance searches require absolute completeness.
+                            OpenPatent provides access to over 220M+ patent documents across 100+ jurisdictions, updated
+                            weekly.</p>
                         <div class="feature-list-item">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" style="color: var(--primary); min-width: 20px;">
                                 <polyline points="20 6 9 17 4 12" />
                             </svg>
-                            <span>Shared Workspaces for client feedback</span>
+                            <span>220M+ full-text patent records</span>
                         </div>
                         <div class="feature-list-item">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" style="color: var(--primary); min-width: 20px;">
                                 <polyline points="20 6 9 17 4 12" />
                             </svg>
-                            <span>Automated notifications on tech trends</span>
+                            <span>Comprehensive coverage of 100+ jurisdictions</span>
+                        </div>
+                        <div class="feature-list-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" style="color: var(--primary); min-width: 20px;">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            <span>1-day turnaround for translations</span>
                         </div>
                     </div>
                     <div class="feature-image">
-                        <img src="https://placehold.co/600x400/f3f4f6/1f2937?text=Collaboration+Workspace"
-                            alt="Collaboration"
-                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+                        <div class="marquee-container" style="width: 100%; border: none;">
+                            <div class="marquee-content">
+                                <!-- Group 1 -->
+                                <div class="marquee-item">
+                                    <div class="office-logo">USPTO</div>
+                                    <div class="office-info"><span class="office-name">United States Patent and
+                                            Trademark Office</span><span class="office-region">USA</span></div>
+                                </div>
+                                <div class="marquee-item">
+                                    <div class="office-logo">EPO</div>
+                                    <div class="office-info"><span class="office-name">European Patent
+                                            Office</span><span class="office-region">Europe</span></div>
+                                </div>
+                                <div class="marquee-item">
+                                    <div class="office-logo">CNIPA</div>
+                                    <div class="office-info"><span class="office-name">China National IP
+                                            Administration</span><span class="office-region">China</span></div>
+                                </div>
+                                <div class="marquee-item">
+                                    <div class="office-logo">JPO</div>
+                                    <div class="office-info"><span class="office-name">Japan Patent Office</span><span
+                                            class="office-region">Japan</span></div>
+                                </div>
+                                <div class="marquee-item">
+                                    <div class="office-logo">KIPO</div>
+                                    <div class="office-info"><span class="office-name">Korean Intellectual Property
+                                            Office</span><span class="office-region">South Korea</span></div>
+                                </div>
+                                <div class="marquee-item">
+                                    <div class="office-logo">IPOS</div>
+                                    <div class="office-info"><span class="office-name">IP Office of
+                                            Singapore</span><span class="office-region">Singapore</span></div>
+                                </div>
+                                <div class="marquee-item">
+                                    <div class="office-logo">WIPO</div>
+                                    <div class="office-info"><span class="office-name">World IP Organization</span><span
+                                            class="office-region">Global</span></div>
+                                </div>
+                                <div class="marquee-item">
+                                    <div class="office-logo">UKIPO</div>
+                                    <div class="office-info"><span class="office-name">UK Intellectual Property
+                                            Office</span><span class="office-region">United Kingdom</span></div>
+                                </div>
+                                <!-- Duplicate for seamless scroll -->
+                                <div class="marquee-item">
+                                    <div class="office-logo">USPTO</div>
+                                    <div class="office-info"><span class="office-name">United States Patent and
+                                            Trademark Office</span><span class="office-region">USA</span></div>
+                                </div>
+                                <div class="marquee-item">
+                                    <div class="office-logo">EPO</div>
+                                    <div class="office-info"><span class="office-name">European Patent
+                                            Office</span><span class="office-region">Europe</span></div>
+                                </div>
+                                <div class="marquee-item">
+                                    <div class="office-logo">CNIPA</div>
+                                    <div class="office-info"><span class="office-name">China National IP
+                                            Administration</span><span class="office-region">China</span></div>
+                                </div>
+                                <div class="marquee-item">
+                                    <div class="office-logo">JPO</div>
+                                    <div class="office-info"><span class="office-name">Japan Patent Office</span><span
+                                            class="office-region">Japan</span></div>
+                                </div>
+                                <div class="marquee-item">
+                                    <div class="office-logo">KIPO</div>
+                                    <div class="office-info"><span class="office-name">Korean Intellectual Property
+                                            Office</span><span class="office-region">South Korea</span></div>
+                                </div>
+                                <div class="marquee-item">
+                                    <div class="office-logo">IPOS</div>
+                                    <div class="office-info"><span class="office-name">IP Office of
+                                            Singapore</span><span class="office-region">Singapore</span></div>
+                                </div>
+                                <div class="marquee-item">
+                                    <div class="office-logo">WIPO</div>
+                                    <div class="office-info"><span class="office-name">World IP Organization</span><span
+                                            class="office-region">Global</span></div>
+                                </div>
+                                <div class="marquee-item">
+                                    <div class="office-logo">UKIPO</div>
+                                    <div class="office-info"><span class="office-name">UK Intellectual Property
+                                            Office</span><span class="office-region">United Kingdom</span></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Feature 3 -->
                 <div class="feature-row">
                     <div class="feature-content">
-                        <h3 class="feature-title">Robust API & Services</h3>
-                        <p class="feature-desc">Strengthen searches with diverse data sources. Or free up time by
-                            outsourcing complex searches to our team of specialized experts.</p>
+                        <h3 class="feature-title">Faster Turnaround & Higher Margins</h3>
+                        <p class="feature-desc">Accelerate Prior Art, FTO, and Invalidity searches. OpenPatent helps law
+                            firms reduce research time significantly, allowing you to improve margins on client
+                            deliverables without compromising on depth.</p>
                         <div class="feature-list-item">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" style="color: var(--primary); min-width: 20px;">
                                 <polyline points="20 6 9 17 4 12" />
                             </svg>
-                            <span>Secure API Access</span>
+                            <span>Slash research time by up to 80%</span>
                         </div>
                         <div class="feature-list-item">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" style="color: var(--primary); min-width: 20px;">
                                 <polyline points="20 6 9 17 4 12" />
                             </svg>
-                            <span>Professional Search Services available</span>
+                            <span>Improve profitability by up to 50% per project</span>
+                        </div>
+                        <div class="feature-list-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" style="color: var(--primary); min-width: 20px;">
+                                <polyline points="20 6 9 17 4 12" />
+                            </svg>
+                            <span>Conduct lesser rounds of searches while mainintaing quality</span>
                         </div>
                     </div>
                     <div class="feature-image">
-                        <img src="https://placehold.co/600x400/f3f4f6/1f2937?text=API+Integrations" alt="API"
+                        <img src="../../images/solutions/efficiency-illustration.png"
+                            alt="Efficiency and Margin Optimization"
                             style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
                     </div>
                 </div>
@@ -202,10 +338,17 @@
         <!-- CTA Footer -->
         <section class="cta-section">
             <div class="container">
-                <h2 class="cta-title">Ready to optimize your firm's efficiency?</h2>
-                <p class="cta-desc">Join top law firms using Goveda to innovate faster and serve clients better.</p>
-                <a href="http://goveda.com/contact" class="btn btn-primary"
-                    style="background: white; color: black; padding: 16px 48px; font-size: 1.1rem;">Book a demo</a>
+                <h2 class="cta-title">Ready to boost your firm's patent workflow?</h2>
+                <p class="cta-desc">Sign up for <strong>OpenPatent Pro</strong> and unlock AI‑driven search, analysis,
+                    and reporting tailored for law firms.</p>
+                <div style="display: flex; justify-content: center; gap: 16px;">
+                    <a href="../../products/openpatent-pro/" class="btn btn-primary"
+                        style="background: white; color: black; padding: 16px 48px; font-size: 1.1rem;">Sign Up for
+                        OpenPatent Pro</a>
+                    <a href="../../products/pro/" class="btn btn-outline"
+                        style="background: transparent; color: white; border-color: white; padding: 16px 48px; font-size: 1.1rem;">Learn
+                        About GoVeda Pro</a>
+                </div>
             </div>
         </section>
 
@@ -225,7 +368,7 @@
             </div>
         </footer>
     </div>
-    <script type="module" src="/src/solutions.js"></script>
+    <script type="module" src="../../src/solutions.js"></script>
 </body>
 
 </html>
